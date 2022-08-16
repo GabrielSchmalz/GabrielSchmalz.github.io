@@ -39,6 +39,7 @@ h2 {
 
 body {
     background-image: url(./images/bg.png);
+    background-size: cover;
 }
 
 section {
@@ -96,14 +97,9 @@ img {
     margin: auto;
 }
 
-.inf_link {
-    padding-inline: auto;
-}
 
 .link {
     display: flex;
-    gap: 1.75rem;
-
     border-radius: 100vmax;
 
     font-family: 'Outfit', sans-serif;
@@ -139,6 +135,8 @@ img {
 
 .home {
     height: 100vh;
+    padding-block: 0;
+    padding-top: 1rem;
 }
 
 @media (min-width: 40em) {
@@ -230,9 +228,12 @@ img {
     .github, .linkedin {
         width: 220px;
         height: 60px;
-    }    
-}
+    }
 
+    .link {
+        gap: 1.75rem
+    }
+}
 
 @media (max-width: 60em) {
     .navigation {
@@ -297,5 +298,9 @@ img {
 
     h2 {
         text-align: center;
+    }
+
+    .link {
+        justify-content: space-between;
     }
 }
