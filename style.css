@@ -23,6 +23,8 @@ p {
     text-align: justify;
     color: white;
 
+    line-height: 1.3em;
+
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -35,6 +37,14 @@ h2 {
     font-weight: 600;
     font-size: 40px;
     color: white;
+}
+
+h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    line-height: 1.6;
 }
 
 body {
@@ -96,7 +106,6 @@ img {
     text-align: center;
     margin: auto;
 }
-
 
 .link {
     display: flex;
@@ -239,7 +248,7 @@ img {
     .navigation {
         display: none;
         position: fixed;
-        padding: 1.5rem;
+        padding: 3rem;
         inset: 1.5rem 1rem auto;
         max-width: 56rem;
         margin-inline: auto;
@@ -257,7 +266,7 @@ img {
 
     .nav-list {
         display: grid;
-        gap: 1rem;
+        gap: 3rem;
         text-align: center;
 
     }
@@ -274,18 +283,25 @@ img {
     .mobile-nav-toggle {
         display: block;
         position: fixed;
-        top: 1.25rem;
-        right: 1rem;
+        top: 2rem;
+        right: 1.5rem;
         cursor: pointer;
         background: transparent;
         border: 0;
-        padding: .5rem;
+        padding: 1rem;
         z-index: 1;
+        width: 2.5em;
+        aspect-ratio: 1;
+
+        background-image: url("images/menu.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     
-    .mobile-nav-toggle .close {
-        display: none;
-    }        
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("images/close.png");
+    }
 
     .pbm {
         padding-block: .25rem;
@@ -296,7 +312,7 @@ img {
     position: fixed;
     }
 
-    h2 {
+    h2,h3 {
         text-align: center;
     }
 

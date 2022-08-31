@@ -11,3 +11,13 @@ navToggle.addEventListener('click', () => {
     header.toggleAttribute('data-overlay');
 });
 
+const navHide = document.querySelector('.nav-list');
+
+navHide.addEventListener('click', () => {
+    nav.hasAttribute('data-visible')
+        ? navToggle.setAttribute('aria-expanded', false)
+        : navToggle.setAttribute('aria-expanded', true);
+
+    nav.toggleAttribute('data-visible');
+    header.toggleAttribute('data-overlay');
+});
